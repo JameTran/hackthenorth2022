@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300&family=Poppins&display=swap');
+
+*{
+  background-color: #1d1d1d;
+}
+
+.file-input{
+  display:none;
+}
+
+.file-button{
+  position:absolute;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  left: 50%;
+  bottom: 50%;
+  transform:translate(-50%, -50%);
+  background-color:blue;
+  scale:500%;
+}
