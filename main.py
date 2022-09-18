@@ -11,6 +11,7 @@ async def root():
 @app.get("/summary")
 async def summaryasync():
     summaries = summary.generateSummary(paragraphs)
+    return summaries
     
 
 @app.get("/tone")
