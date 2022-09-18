@@ -36,6 +36,7 @@ def speech_recognize_continuous_from_file():
     # stop continuous recognition on either session stopped or canceled events
     speech_recognizer.session_stopped.connect(stop_cb)
     speech_recognizer.canceled.connect(stop_cb)
+    
 
     
 
