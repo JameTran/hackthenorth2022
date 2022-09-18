@@ -3,8 +3,8 @@ import embeddings
 co = cohere.Client('kVZ1RsPpqi2y7lX5tVZJX8fcD7mtFKIDlteoo0GB')
 
 
-def readFile():
-    with open('sample.txt') as f:
+def readFile(file_name: str) -> list:
+    with open(file_name) as f:
         read_data = f.read()
     str_list = list(filter(None, str.splitlines(read_data)))
     return str_list
@@ -36,5 +36,5 @@ def generateSummary(paragraphs: list) -> list:
                 break
     return summary
 
-
+#print(readFile("sample.txt"))
     
