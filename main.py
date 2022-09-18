@@ -5,6 +5,8 @@ import tones
 
 app = FastAPI()
 paragraphs = summary.readFile("sample.txt")
+p2 = summary.readFile("sample2.txt")
+p3 = summary.readFile("sample3.txt")
 #print(paragraphs)
 
 @app.get("/")
@@ -19,7 +21,7 @@ async def summaryasync():
 @app.get("/informal_tone")
 async def tone():
     informal_paragraphs = []
-    for i in paragraphs:
+    for i in p3:
         informal_paragraphs.append(tones.informal_to_formal(i))
     return informal_paragraphs
 '''
@@ -33,6 +35,6 @@ async def tone():
 @app.get("/correction")
 async def correction():
     corrected_paragraphs = []
-    for i in paragraphs:
+    for i in p2:
         corrected_paragraphs.append(grammar.correct_grammar(i))
     return corrected_paragraphs
